@@ -1,0 +1,17 @@
+.heart {
+  position: absolute;
+  opacity: 0;              /* start hidden */
+  animation: fall 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;            /* become visible at the very start of its own animation */
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0.2;
+  }
+}
