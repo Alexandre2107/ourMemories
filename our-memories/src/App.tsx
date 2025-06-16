@@ -6,12 +6,13 @@ import HeartRain from "./components/HeartRain";
 import "./index.css";
 
 function App() {
+  const base = import.meta.env.BASE_URL;
   const images = [
-    "/photos/photo1.jpg",
-    "/photos/photo2.jpg",
-    "/photos/photo3.jpg",
-    "/photos/photo4.jpg",
-    "/photos/photo5.jpg",
+    base + "photos/photo1.jpg",
+    base + "photos/photo2.jpg",
+    base + "photos/photo3.jpg",
+    base + "photos/photo4.jpg",
+    base + "photos/photo5.jpg",
   ];
 
   return (
@@ -19,8 +20,10 @@ function App() {
       <HeartRain />
       <SpotifyEmbed url="https://open.spotify.com/intl-pt/track/25osmdhvjltPlN7gI2Javd?si=598ee4328c7a4391" />
       <PhotoCarousel images={images} />
-      <h1 className="text-2xl font-bold">Alex y Majito❤️</h1>
-      <LoveTimer startDate="2025-04-17T00:00:00" />
+      <hr className="w-full max-w-md border-t border-white opacity-50" />
+      <h1 className="text-2xl font-bold">Alex y Majito | 17.04.2025🍁❤️</h1>
+      <p className="text-center text-lg">Being in love with you since:</p>
+      <LoveTimer startDate="2025-04-18T00:00:00" />
       <DailyMessage />
     </div>
   );
